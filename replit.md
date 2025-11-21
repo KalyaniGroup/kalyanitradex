@@ -150,7 +150,15 @@ Note: While TypeScript type definitions are included, the project uses JavaScrip
 
 ### Hosting and Deployment
 
-**Configuration for Replit/Cloud Hosting:**
+**Replit Development Environment:**
 - Server configured to bind to `0.0.0.0` (all network interfaces)
 - Fixed port 5000 with strict port mode
 - This setup is optimized for containerized or cloud-based deployment environments
+
+**GitHub Pages Deployment:**
+- Configured for deployment to: https://kalyanigroup.github.io/kalyanitradex/
+- Base path set to `/kalyanitradex/` in vite.config.js
+- Deployment package: gh-pages@^6.3.0
+- Deployment command: `npm run deploy`
+- Repository: https://github.com/KalyaniGroup/kalyanitradex
+- Deployment instructions: See DEPLOY_TO_GITHUB_PAGES.md
