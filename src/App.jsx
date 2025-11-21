@@ -13,8 +13,8 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const subject = `Inquiry from ${formData.name} - ${formData.country}`;
-    const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0ACountry: ${formData.country}%0D%0AProduct Interest: ${formData.product}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
-    window.location.href = `mailto:kalyanitradex@gmail.com?subject=${subject}&body=${body}`;
+    const body = `Name: ${formData.name}\r\nEmail: ${formData.email}\r\nCountry: ${formData.country}\r\nProduct Interest: ${formData.product}\r\n\r\nMessage:\r\n${formData.message}`;
+    window.location.href = `mailto:kalyanitradex@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   const handleChange = (e) => {
